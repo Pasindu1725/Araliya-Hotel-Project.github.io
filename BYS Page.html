@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Araliya Hotel</title>
+    <link rel="stylesheet" href="BYS Page.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html">Araliya Hotel</a></div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About Page.html">About</a></li>
+                <li><a href="Accommodation Page.html">Accommodation</a></li>
+                <li><a href="Feedback Page.html">Feedback</a></li>
+                <li><a href="BYS Page.html" class="booking_btn">BOOK YOUR STAY</a></li>
+            </ul>
+            <div class="bar_btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About Page.html">About</a></li>
+                <li><a href="Accommodation Page.html">Accommodation</a></li>
+                <li><a href="Feedback Page.html">Feedback</a></li>
+                <li><a href="BYS Page.html" class="booking_btn">BOOK YOUR STAY</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="form-container">
+        <form id="booking-form">
+            <!-- Personal Information -->
+            <div class="form-step active-step">
+                <div class="input-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                <div class="input-group">
+                    <label for="id-number">ID Number:</label>
+                    <input type="text" id="id-number" name="id-number" required>
+                </div>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Date and Room Selection -->
+            <div class="form-step">
+                <div class="input-group">
+                    <label for="checkin-date">Check-in Date:</label>
+                    <input type="date" id="checkin-date" name="checkin-date" required>
+                </div>
+                <div class="input-group">
+                    <label for="checkout-date">Check-out Date:</label>
+                    <input type="date" id="checkout-date" name="checkout-date" required>
+                </div>
+                <div class="input-group">
+                    <label for="room-type">Room Type:</label>
+                    <select id="room-type" name="room-type">
+                        <option value="Single - $100/night">Single - $100/night</option>
+                        <option value="Double - $150/night">Double - $150/night</option>
+                        <option value="Suite - $200/night">Suite - $200/night</option>
+                    </select>
+                </div>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Package and Transfer Selection -->
+            <div class="form-step">
+                <div class="input-group">
+                    <label for="package">Select Package:</label>
+                    <select id="package" name="package">
+                        <option value="none">No Package</option>
+                        <option value="breakfast">Breakfast - $20/day</option>
+                        <option value="all-inclusive">All-inclusive - $50/day</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="transfer">Add Transfer Service ($30):</label>
+                    <input type="checkbox" id="transfer" name="transfer">
+                </div>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="button" class="next-btn">Next</button>
+            </div>
+
+            <!-- Summary and Confirmation -->
+            <div class="form-step">
+                <div class="summary-section">
+                    <h2 class="summary-heading">Review Your Booking</h2>
+                    <p class="summary-detail"><span class="detail-label">Name:</span><span class="detail-value" id="detail-name"></span></p>
+                    <p class="summary-detail"><span class="detail-label">ID Number:</span><span class="detail-value" id="detail-id"></span></p>
+                    <p class="summary-detail"><span class="detail-label">Check-in:</span><span class="detail-value" id="detail-checkin"></span></p>
+                    <p class="summary-detail"><span class="detail-label">Check-out:</span><span class="detail-value" id="detail-checkout"></span></p>
+                    <p class="summary-detail"><span class="detail-label">Room Type:</span><span class="detail-value" id="detail-roomtype"></span></p>
+                    <p class="summary-detail"><span class= "detail-label">Package:</span><span class="detail-value" id="detail-package"></span></p>
+                    <p class="summary-detail"><span class= "detail-label">Transfer Service:</span><span class= "detail-value" id="detail-transfer"></span></p>
+                    <p class="summary-detail"><span class="detail-label">Total Cost:</span><span class= "detail-value" id="detail-totalcost"></span></p>
+                </div>
+                <button type="button" class="prev-btn">Previous</button>
+                <button type="submit">Confirm Booking</button>
+            </div>
+        </form>
+        <div id="confirmationMessage" style="display: none; color: green; font-size: 20px; margin-top: 20px;"></div>
+    </div>
+
+    <footer>
+        <div class="footerContainer">
+            <div class="socialIcons">
+                <a href="https://m.facebook.com/login/?locale=en_GB"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/accounts/login/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="footerNav">
+                <ul><li><a href="index.htmll">Home</a></li>
+                    <li><a href="About Page.html">About</a></li>
+                    <li><a href="Accommodation Page.html">Accommodation</a></li>
+                    <li><a href="Feedback Page.html">Feedback</a></li>
+                    </ul>
+            </div>
+               
+        </div>
+        <div class="footerBottom">
+            <p>Copyright &copy;2023; Designed by <span class="designer">PASINDU</span></p>
+        </div>
+    </footer>
+    <script src="BYS Page.js"></script>
+</body>
+</html>

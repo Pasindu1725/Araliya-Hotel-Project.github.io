@@ -1,0 +1,336 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    /* Set background photo */
+    background-image: url('1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Ensures the background covers the entire viewport */
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+a:hover{
+    color: orangered;
+}
+
+/*HEADER*/
+header {
+    position: relative;
+    padding: 0 2rem;
+    /* Set initial background color */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Set transition for background color */
+    transition: background-color 0.5s ease;
+}
+
+/* Add this CSS to your stylesheet */
+
+header.black-bg {
+    background-color: #000 !important; /* Change to full black */
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: black(255, 255, 255, 0.8); /* Adjust the background color and opacity as needed */
+    z-index: 1000; /* Ensure the header appears above the slideshow */
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .links a{
+    padding-bottom: 5px;
+    color: white;
+    border-bottom: 2px solid transparent;
+}
+
+.navbar .links a:hover{
+    border-color: var(--white);
+}
+
+.navbar .bar_btn{
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.booking_btn{
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.booking_btn:hover{
+    scale: 1.05;
+    color: #fa7e01;
+}
+
+.booking_btn:active{
+    scale: 0.95;
+}
+
+/*DROPDOWN MENU*/
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 300px;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 260px;
+
+}
+
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .booking_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*SLIDESHOW*/
+
+.slideshow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Set the height to cover the entire viewport */
+    overflow: hidden;
+    z-index: -1;
+    
+}
+
+.slideshow-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire container */
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* Adjust the transition timing as needed */
+    
+}
+
+.slideshow-image.active {
+    opacity: 1;
+}
+
+
+/*FOOTER*/
+
+/* Footer styling with more changes */
+
+footer {
+    background-color: #333; /* Changed background color */
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 50px 30px; /* Increased top padding */
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px; /* Increased margin bottom */
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 12px; /* Increased padding */
+    background-color: #555; /* Changed background color */
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.socialIcons a i {
+    font-size: 2.2em; /* Increased icon size */
+    color: #fff; /* Changed icon color */
+}
+
+/* Hover affect on social media icon */
+.socialIcons a:hover {
+    background-color: #444; /* Changed hover background color */
+}
+
+.socialIcons a:hover i {
+    color: #ddd; /* Changed hover icon color */
+}
+
+.footerNav {
+    margin: 40px 0; /* Increased margin */
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav ul li a {
+    color: #ddd;
+    margin: 15px; /* Decreased margin */
+    text-decoration: none;
+    font-size: 1.2em; /* Decreased font size */
+    opacity: 0.8; /* Adjusted opacity */
+    transition: 0.3s; /* Decreased transition time */
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+}
+
+.footerBottom {
+    background-color: #222; /* Changed bottom background color */
+    padding: 30px; /* Increased padding */
+    text-align: center;
+}
+
+.footerBottom p {
+    color: #ccc; /* Changed text color */
+    font-size: 0.9em; /* Decreased font size */
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+    color: #999; /* Changed text color */
+}
+
+@media (max-width: 700px) {
+    .footerNav ul li {
+        margin: 10px; /* Decreased margin */
+    }
+
+    .socialIcons a {
+        padding: 10px; /* Adjusted padding */
+        margin: 6px; /* Decreased margin */
+    }
+}
+
+
+/*GREETING*/
+#greeting{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000000;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+#greeting h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+
+
+
+/*RESPONSIVE DESIGN*/
+
+@media (max-width: 992px){
+    .navbar .links,
+    .navbar .booking_btn{
+        display: none;
+    }
+
+    .navbar .bar_btn{
+        display: block; /* Added to show the bar_btn */
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media (max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+@media screen and (max-width: 768px) {
+.footerContainer {
+    padding: 20px 10px;
+  }
+ 
+  .socialIcons a {
+    padding: 6px;
+    margin: 4px;
+  }
+ 
+  .footerNav ul li a {
+    margin: 10px;
+    font-size: 1em;
+  }
+}
